@@ -1330,6 +1330,9 @@ return view.extend({
 			_('Auto update subscriptions.'));
 		o.default = o.disabled;
 		o.rmempty = false;
+		
+		o = s.taboption('subscription', form.Value, 'user_agent', _('User-Agent'));
+		o.placeholder = 'Wget/1.21 (HomeProxy, like v2rayN)';
 
 		o = s.taboption('subscription', form.ListValue, 'auto_update_time', _('Update time'));
 		for (var i = 0; i < 24; i++)
